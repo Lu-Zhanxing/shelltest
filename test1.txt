@@ -3,7 +3,7 @@
 
 echo '---start push--'
 echo "---当前分支---"
-branch=git branch
+branch=$(git branch)
 echo $branch
 
 git_add(){
@@ -14,7 +14,7 @@ git_add(){
 
   contains_str "$statusResult""$no_change"
 
-  if[[$?==1]];then
+  if[[$contains_str ?==1]];then
     echo "===当前没有新增或者修改的文件==="
     git_push
     exit
