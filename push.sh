@@ -23,7 +23,7 @@ git_branch()
        read -p '请输入提交描述信息：' commit_m
        git commit -m $commit_m
        echo '推送到远程仓库：'
-       git push origin test
+       git push origin $(git rev-parse --abbrev-ref HEAD)
 #      echo '您已成功推送至远程仓库，改页面将在三秒后关闭......'
       sleep 3s
       exit
