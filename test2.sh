@@ -3,7 +3,8 @@
 
 echo "自动提交开始"
 git add .
-echo "git提交注释:$1"
-git commit -m '$1'
+#echo "git提交注释:$1"
+read -p "请输入commit提示信息：" commit_m
+git commit -m $commit_m
 git push origin master
 echo "自动提交完成"
