@@ -16,3 +16,4 @@ shell test 3.19 23:39
 shell test 3.20 8:27
 shell test 3.20 8:45
 shell test 3.20 9:24
+shell test 3.20 22:35-lu
