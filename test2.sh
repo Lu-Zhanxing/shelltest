@@ -3,7 +3,7 @@
 
 echo "自动提交开始"
 git add .
-git commit -m 'auto shell test2'
-# echo "git提交注释:$1"
+echo "git提交注释:$1"
+git commit -m '$1'
 git push origin master
 echo "自动提交完成"
