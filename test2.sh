@@ -6,6 +6,7 @@ git add .
 #echo "git提交注释:$1"
 read -p "请输入commit提示信息：" commit_m
 git commit -m $commit_m
+echo '将本地内容推送到远程仓库：'
 git push origin $(git rev-parse --abbrev-ref HEAD)
 #echo "自动提交完成"
 sleep 3s
