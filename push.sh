@@ -29,7 +29,7 @@ git_branch()
        read -p '请输入提交描述信息(注意：1.描述信息不能为空，必须输入！！！  2.如果您没有对工作空间的内容做任何操作，将会提示“nothing to commit, working tree clean ”信息)：
        ' commit_m
        git commit -m  $commit_m  
-       echo '推送到远程仓库(注意：1.如果您没有对工作空间的内容做任何操作，将会提示“everything up-to-date”信息。2.如果您成功上传到远程仓库，会提示“”信息)：'
+       echo '推送到远程仓库(注意：1.如果您没有对工作空间的内容做任何操作，将会提示“everything up-to-date”信息。2.如果您拉取到本地的不是远程仓库最新的数据，将会提示红色的“error”提示信息，此时您需要先运行pull.sh，将远程仓库最新代码拉取过来。)：'
        git push origin $(git rev-parse --abbrev-ref HEAD)
 #      echo '您已成功推送至远程仓库，改页面将在三秒后关闭......'
       sleep 3s
