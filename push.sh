@@ -26,7 +26,8 @@ git_branch()
   echo '即将进行将本地工作空间的内容提交到远程仓库的一系列操作...'    
   elif [  "$branch_switch" == "N" ];then
        git add .
-       read -p '请输入提交描述信息(注意：1.描述信息不能为空，必须输入！！！2.如果您没有对工作空间的内容做任何操作，将会提示“”信息)：' commit_m
+       read -p '请输入提交描述信息(注意：1.描述信息不能为空，必须输入！！！2.如果您没有对工作空间的内容做任何操作，将会提示“”信息)：
+       ' commit_m
        git commit -m  $commit_m  
        echo '推送到远程仓库(如您没有对工作空间的内容做任何操作，将会提示“everything up-to-date”信息)：'
        git push origin $(git rev-parse --abbrev-ref HEAD)
