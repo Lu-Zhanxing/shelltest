@@ -7,3 +7,4 @@ read -p "请输入commit提示信息：" commit_m
 git commit -m $commit_m
 git push origin $(git rev-parse --abbrev-ref HEAD)
 sleep 3s
+update11:46
